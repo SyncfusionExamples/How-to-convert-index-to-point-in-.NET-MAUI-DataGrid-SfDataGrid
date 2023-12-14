@@ -13,11 +13,5 @@ namespace SfDataGridSample
         {
             InitializeComponent();
         }
-
-        private void Datagrid_CellTapped(object? sender, DataGridCellTappedEventArgs e)
-        {
-            Point point = datagrid.RowColumnIndexToPoint(e.RowColumnIndex);
-            Debug.WriteLine(point.X + " " + point.Y);
-        }       
     }
 }

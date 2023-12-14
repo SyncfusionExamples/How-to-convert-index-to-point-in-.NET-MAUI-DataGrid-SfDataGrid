@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:syncfusion="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Maui.DataGrid"
              xmlns:local="clr-namespace:SfDataGridSample"
+             xmlns:behaviors="clr-namespace:SfDataGridSample.Behaviors"
              x:Class="SfDataGridSample.MainPage">
 
     <ContentPage.BindingContext>
@@ -12,7 +13,6 @@
     <syncfusion:SfDataGrid  x:Name="datagrid"
                             ItemsSource="{Binding Employees}"
                             AutoGenerateColumnsMode="None"
-                            CellTapped="Datagrid_CellTapped"
                             DefaultColumnWidth="155">
         <syncfusion:SfDataGrid.Columns>
             <syncfusion:DataGridTextColumn MappingName="EmployeeID"
@@ -22,5 +22,9 @@
             <syncfusion:DataGridTextColumn MappingName="IDNumber"
                                            HeaderText="ID Number" />
         </syncfusion:SfDataGrid.Columns>
+        
+        <syncfusion:SfDataGrid.Behaviors>
+            <behaviors:DataGridBehavior />
+        </syncfusion:SfDataGrid.Behaviors>
     </syncfusion:SfDataGrid>
 </ContentPage>
